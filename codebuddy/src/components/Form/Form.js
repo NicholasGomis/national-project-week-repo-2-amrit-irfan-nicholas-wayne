@@ -5,11 +5,9 @@ import React from "react";
 //   console.log("submit received");
 // };
 
-
-
-export function Form(props) {
+export function Form() {
   return (
-    <form className="form" >
+    <form className="form">
       <label htmlFor="insert-name">Name:</label>
       <input className="name-input" placeholder="Insert your name"></input>
       <label htmlFor="insert-title">Title:</label>

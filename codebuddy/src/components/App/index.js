@@ -4,34 +4,32 @@ import { useState } from "react";
 import "./App.css";
 
 //components
-import Form from "../Form/Form"
+import Form from "../Form/Form";
 import Post from "../Post/Post";
-import dataPosts from "../lib/dataPost"
+
 //Hook
 
-
 // for temp use
-
+import dataPosts from "../lib/dataPost";
 
 function App() {
-
   const [posts, setPosts] = useState(dataPosts);
-
 
   return (
     <div className="App">
-    
       <Form />
-      <Post
-        avatar={posts.avatar}
-        title={posts.title}
-        username={posts.username}
-        date={posts.date}
-        code={posts.code}
-        comments={posts.comment}
-      />
-
-      
+      {posts.map((post) => {
+        return (
+          <Post
+            avatar={post.avatar}
+            title={post.title}
+            username={post.username}
+            date={post.date}
+            code={post.code}
+            comments={post.comments}
+          />
+        );
+      })}
     </div>
   );
 }
