@@ -4,8 +4,8 @@ import { useState } from "react";
 import "./App.css";
 
 //components
-import Form from "../Form/Form";
-import Post from "../Post/Post";
+import Form from "../Form";
+import Feed from "../Feed";
 
 //Hook
 
@@ -18,18 +18,7 @@ function App() {
   return (
     <div className="App">
       <Form />
-      {posts.map((post) => {
-        return (
-          <Post
-            avatar={post.avatar}
-            title={post.title}
-            username={post.username}
-            date={post.date}
-            code={post.code}
-            comments={post.comments}
-          />
-        );
-      })}
+      <Feed posts={posts} />
     </div>
   );
 }
