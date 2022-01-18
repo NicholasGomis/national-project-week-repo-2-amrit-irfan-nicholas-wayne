@@ -13,7 +13,7 @@ import Post from "../Post/Post";
 import dataPosts from "../lib/dataPost";
 
 function App() {
-  const [posts, setPosts] = useState(dataPosts);
+  const [posts] = useState(dataPosts);
 
   return (
     <div className="App">
