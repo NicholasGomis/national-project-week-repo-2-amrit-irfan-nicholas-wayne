@@ -18,7 +18,7 @@ function App() {
       <Post
         avatar={avatar}
         title={title}
-        name={username}
+        username={username}
         date={date}
         code={code}
         comments={comments}
