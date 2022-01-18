@@ -6,37 +6,32 @@ import "./App.css";
 //components
 import Form from "../Form/Form"
 import Post from "../Post/Post";
-
+import dataPosts from "../lib/dataPost"
 //Hook
 
 
 // for temp use
- const data = [{avatar ="https://image.shutterstock.com/image-vector/boy-default-placeholder-children-avatar-260nw-369833402.jpg",
-  title = "Some Code Problem",
-  username = "John Doe",
-  date = "18/01/2022",
-  code = "function() { do something}",
-  comments = "code it like this"}]
+
 
 function App() {
 
-  const [posts, setPosts] = useState(data);
+  const [posts, setPosts] = useState(dataPosts);
+
 
   return (
     <div className="App">
     
-      <Form 
-      onSubmit={handleSubmit}
-      />
+      <Form />
       <Post
-        avatar={avatar}
-        title={title}
-        username={username}
-        date={date}
-        code={code}
-        comments={comments}
+        avatar={posts.avatar}
+        title={posts.title}
+        username={posts.username}
+        date={posts.date}
+        code={posts.code}
+        comments={posts.comment}
       />
 
+      
     </div>
   );
 }
