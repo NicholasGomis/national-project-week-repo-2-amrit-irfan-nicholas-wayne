@@ -1,6 +1,7 @@
 import "./App.css";
 
 //components
+import Form from "../Form/Form"
 import Post from "../Post/Post";
 
 // for temp use
@@ -15,6 +16,10 @@ const comments = "code it like this";
 function App() {
   return (
     <div className="App">
+    
+      <Form 
+      
+      />
       <Post
         avatar={avatar}
         title={title}
@@ -23,6 +28,7 @@ function App() {
         code={code}
         comments={comments}
       />
+
     </div>
   );
 }
