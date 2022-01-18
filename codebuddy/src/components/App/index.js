@@ -27,6 +27,7 @@ function App() {
         date={date}
         code={code}
         comments={comments}
+        
       />
 
     </div>

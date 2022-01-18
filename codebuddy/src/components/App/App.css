@@ -6,10 +6,11 @@
 .post{
 
 
-  background-color: grey;
+  background-color: #1c1e21;
   padding: 2em;
   width:  30em;
   border-radius: 30px;
   text-align: center;
   margin-left: 40em;
+  color: aliceblue;
 }
