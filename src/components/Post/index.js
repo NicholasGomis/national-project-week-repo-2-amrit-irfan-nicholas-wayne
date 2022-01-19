@@ -1,7 +1,6 @@
 import React from "react";
 import "./Post.css";
 
-
 function Post({
   avatar,
   title,
@@ -17,19 +16,28 @@ function Post({
       <div className="avatar-name">
         <img className="avatar" src={avatar} alt="some avatar"></img>
         <h3 className="user_name">{username}</h3>
+        <h3 className="post-date">{date}</h3>
       </div>
 
-
-     
-
-      <p className="post-date">{date}</p>
-
-      <h1 className="post-title">{title}</h1>
-      <h1 className="post-title">{describe}</h1>
+      <h2 className="post-title">{title}</h2>
+      <h3 className="post-title">{describe}</h3>
       <h3>{attempt}</h3>
       <p className="input-post">
         <code>{code}</code>
       </p>
+      <div className="btn-container">
+        <button className="btn-like">
+          <i class="fas fa-thumbs-up"></i>
+        </button>
+
+        <button className="btn-comment">
+          <i class="fas fa-comment-dots"></i>
+        </button>
+
+        <button className="btn-save">
+          <i class="fas fa-plus-square"></i>
+        </button>
+      </div>
 
       {/* hidden: event shows: comments */}
       <div className="comments"></div>

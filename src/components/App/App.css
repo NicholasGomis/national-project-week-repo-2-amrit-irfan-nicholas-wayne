@@ -1,9 +1,21 @@
-body {
+* {
+  box-sizing: border-box;
+}
+/* body {
   align-items: center;
   background-color: #000;
   display: flex;
   justify-content: center;
-  /* height: 100vh; */
+} */
+
+nav {
+  margin-bottom: 20px;
+  padding: 5px;
+  background-color: #303245;
+}
+.logo-img {
+  width: 250px;
+  height: auto;
 }
 
 /* posts css */
@@ -13,8 +25,8 @@ body {
   padding: 2em;
   width: 30em;
   border-radius: 30px;
-  text-align: center;
-  margin-left: 40em;*/
+  text-align: center;*/
+  margin-left: 40em;
   color: aliceblue;
   background-color: #1c1e21;
   border-radius: 20px;
@@ -50,6 +62,99 @@ body {
   align-items: center;
   justify-content: left;
 }
+
+.post-date {
+  margin-left: 300px;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-like {
+  display: flex;
+  width: 160px;
+  padding: 5px 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #bcc0c4;
+  border-radius: 5px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  margin-top: 5px;
+  outline: 0;
+  text-align: center;
+  width: 19%;
+}
+
+.btn-like:hover {
+  background-color: #65676b;
+}
+
+.fas {
+  color: #000;
+  font-size: 18px;
+}
+
+.btn-comment {
+  display: flex;
+  width: 160px;
+  padding: 5px 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #bcc0c4;
+  border-radius: 5px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  margin-top: 5px;
+  outline: 0;
+  text-align: center;
+  width: 19%;
+}
+
+.btn-comment:hover {
+  background-color: #65676b;
+}
+
+.btn-save {
+  display: flex;
+  width: 160px;
+  padding: 5px 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #bcc0c4;
+  border-radius: 5px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  margin-top: 5px;
+  outline: 0;
+  text-align: center;
+  width: 19%;
+}
+
+.btn-save:hover {
+  background-color: #65676b;
+}
+
+/* hover {
+          background-color: rgba(0, 0, 0, 0.05);
+          cursor: pointer;
+        } */
 
 /* form css */
 
