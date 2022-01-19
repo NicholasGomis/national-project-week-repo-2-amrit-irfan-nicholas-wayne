@@ -7,19 +7,48 @@ import React from "react";
 
 export function Form() {
   return (
-    <form className="form">
-      <label htmlFor="insert-name">Name:</label>
-      <input className="name-input" placeholder="Insert your name"></input>
-      <label htmlFor="insert-title">Title:</label>
-      <input className="title-input" placeholder="Insert post title"></input>
-      <label htmlFor="insert-describe">Describe:</label>
-      <input className="problem-input" placeholder="Explain problem"></input>
-      <label htmlFor="insert-attempt">Attempt:</label>
-      <input className="tried-input" placeholder="What have you tried"></input>
-      <label htmlFor="insert-code">Code:</label>
-      <input className="code-input" placeholder="Insert your code here"></input>
-      <input type="submit" />
-    </form>
+    <div className="form">
+      <div className="title">What is your question?</div>
+      <div className="subtitle">Articulate your question in the soc way!</div>
+      <div className="input-container ic1">
+        <input id="firstname" className="input" type="text" placeholder=" " />
+        <div className="cut"></div>
+        <label for="firstname" className="placeholder">
+          Name
+        </label>
+      </div>
+      <div className="input-container ic2">
+        <input id="title" className="input" type="text" placeholder=" " />
+        <div className="cut"></div>
+        <label for="title" className="placeholder">
+          Title
+        </label>
+      </div>
+      <div className="input-container ic2">
+        <input id="describe" className="input" type="text" placeholder=" " />
+        <div className="cut cut-short"></div>
+        <label for="describe" className="placeholder">
+          Describe your problem
+        </label>
+      </div>
+      <div className="input-container ic2">
+        <input id="attempted" className="input" type="text" placeholder=" " />
+        <div className="cut cut-short"></div>
+        <label for="describe" className="placeholder">
+          What have you tried?
+        </label>
+      </div>
+      <div className="input-container-new ic2">
+        <input id="code" className="input" type="text" placeholder=" " />
+        <div className="cut cut-short"></div>
+        <label for="code" className="placeholder">
+          Insert your code here
+        </label>
+      </div>
+      <button type="text" className="submit">
+        submit
+      </button>
+    </div>
   );
 }
 
