@@ -13,6 +13,8 @@ function Feed({ posts }) {
             date={post.date}
             code={post.code}
             comments={post.comments}
+            attempt={post.attempt}
+            describe={post.describe}
           />
         );
       })}
