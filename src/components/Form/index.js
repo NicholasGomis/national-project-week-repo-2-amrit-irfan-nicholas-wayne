@@ -71,8 +71,25 @@ export function Form() {
 
   // api_name/posts/create
 
+  //send:
+  //date
+  //title
+  //input problem
+  //input attempted
+  //code
+
+  // api_name/posts/create
+
+  // add state to update posts
+  // async Create function to send the new post to the api /post
+  // response from the api new list of posts
+
+  // /posts
+
+  //action=""
+
   return (
-    <form className="form" action="" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="insert-name">Name:</label>
       <input
         className="name-input"
