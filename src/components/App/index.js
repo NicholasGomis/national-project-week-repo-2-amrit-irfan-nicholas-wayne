@@ -6,6 +6,7 @@ import "./App.css";
 //components
 import Form from "../Form";
 import Feed from "../Feed";
+import Navbar from "../Nav";
 
 //Hook
 
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Form />
       <Feed posts={posts} />
     </div>

@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
 
+//declare vars
+const API_URL = "https://code-review-soc-app.herokuapp.com";
+
 // add state to update posts
 // async Create function to send the new post to the api /post
 // response from the api new list of posts
@@ -54,7 +57,15 @@ export function Form() {
 
   function addPost(inputName, inputTitle, inputProblem, inputTried, inputCode) {
     console.log("submit received");
-    console.log(inputName, inputTitle, inputProblem, inputTried, inputCode);
+    const post = {
+      auth_id: 1,
+      title: inputTitle,
+      problem: inputProblem,
+      attempted: inputTried,
+      content: inputCode,
+    };
+    console.log(post);
+    createPosts(post);
     updateName("");
     updateTitle("");
     updateProblem("");
@@ -62,31 +73,16 @@ export function Form() {
     updateCode("");
   }
 
-  //dont send: auth id: num //date
-
-  //title
-  //input problem
-  //input attempted
-  //code
-
-  // api_name/posts/create
-
-  //send:
-  //date
-  //title
-  //input problem
-  //input attempted
-  //code
-
-  // api_name/posts/create
-
-  // add state to update posts
-  // async Create function to send the new post to the api /post
-  // response from the api new list of posts
-
-  // /posts
-
-  //action=""
+  // application/json for line 80
+  async function createPosts(post) {
+    const response = await fetch(`${API_URL}/posts`, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: JSON.stringify(post),
+    });
+    const data = await response.json();
+    console.log(data);
+  }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -162,7 +158,7 @@ export function Form() {
           Insert your code here
         </label>
       </div>
-      <button type="text" className="submit">
+      <button type="submit" className="submit">
         submit
       </button>
     </form>
