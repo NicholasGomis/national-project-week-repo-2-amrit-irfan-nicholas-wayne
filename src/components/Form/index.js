@@ -89,53 +89,56 @@ export function Form() {
   //action=""
 
   return (
+
     <form className="form" onSubmit={handleSubmit}>
-      <label htmlFor="insert-name">Name:</label>
-      <input
-        className="name-input"
-        type="text"
-        value={inputName}
-        onChange={handleNameChange}
-        placeholder="Insert your name"
-      ></input>
+      <div className="title">What is your question?</div>
+      <div className="subtitle">Articulate your question in the soc way!</div>
+      <div className="input-container ic1">
+        <input id="firstname" className="input" type="text" placeholder=" " value={inputName} onChange={handleNameChange}/>
+        <div className="cut"></div>
+        <label htmlFor="firstname" className="placeholder">
+          Name
+        </label>
+      </div>
+      <div className="input-container ic2">
+        <input id="title" className="input" type="text" placeholder=" " value={inputTitle}
+        onChange={handleTitleChange}/>
+        <div className="cut"></div>
+        <label htmlFor="title" className="placeholder">
+          Title
+        </label>
+      </div>
+      <div className="input-container ic2">
+        <input id="describe" className="input" type="text" placeholder=" " value={inputProblem}
+        onChange={handleProblem} />
+        <div className="cut cut-short"></div>
+        <label htmlFor="describe" className="placeholder">
+          Describe your problem
+        </label>
+      </div>
+      <div className="input-container ic2">
+        <input id="attempted" className="input" type="text" placeholder=" "  value={inputTried}
+        onChange={handleTried}/>
+        <div className="cut cut-short"></div>
+        <label htmlFor="describe" className="placeholder">
+          What have you tried?
+        </label>
+      </div>
+      <div className="input-container-new ic2">
+        <input id="code" className="input" type="text" placeholder=" "  value={inputCode}
+        onChange={handleCode}/>
+        <div className="cut cut-short"></div>
+        <label htmlFor="code" className="placeholder">
+          Insert your code here
+        </label>
+      </div>
+      <button type="text" className="submit">
+        submit
+      </button>
+    </div>
 
-      <label htmlFor="insert-title">Title:</label>
-      <input
-        className="title-input"
-        type="text"
-        value={inputTitle}
-        onChange={handleTitleChange}
-        placeholder="Insert post title"
-      ></input>
+  
 
-      <label htmlFor="insert-describe">Describe:</label>
-      <input
-        className="problem-input"
-        type="text"
-        value={inputProblem}
-        onChange={handleProblem}
-        placeholder="Explain problem"
-      ></input>
-
-      <label htmlFor="insert-attempt">Attempt:</label>
-      <input
-        className="tried-input"
-        type="text"
-        value={inputTried}
-        onChange={handleTried}
-        placeholder="What have you tried"
-      ></input>
-
-      <label htmlFor="insert-code">Code:</label>
-      <input
-        className="code-input"
-        tpye="text"
-        value={inputCode}
-        onChange={handleCode}
-        placeholder="Insert your code here"
-      ></input>
-      <input type="submit" />
-    </form>
   );
 }
 
