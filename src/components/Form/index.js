@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+
 //declare vars
 const API_URL = "https://code-review-soc-app.herokuapp.com";
 
@@ -10,7 +11,7 @@ const API_URL = "https://code-review-soc-app.herokuapp.com";
 
 // /posts
 
-export function Form() {
+export function Form({handleNewPost}) {
   const [inputName, updateName] = useState("");
   const [inputTitle, updateTitle] = useState("");
   const [inputProblem, updateProblem] = useState("");
@@ -81,7 +82,16 @@ export function Form() {
       body: JSON.stringify(post),
     });
     const data = await response.json();
-    console.log(data.payload);
+    // console.log(data.payload.attempted);
+    const postDetails = {
+      title:  data.payload.title,
+      username: data.payload.author_id,
+      date: data.payload.date,
+      code: data.payload.content,
+      attempt: data.payload.attempted,
+      describe:data.payload.problem
+    }
+    handleNewPost(postDetails);
   }
 
   return (

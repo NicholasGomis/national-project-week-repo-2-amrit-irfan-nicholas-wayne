@@ -7,12 +7,12 @@ function Feed({ posts }) {
       {posts.map((post) => {
         return (
           <Post
-            avatar={post.avatar}
+            avatar="https://i.ibb.co/r2z4DvG/avatar-soc1.png"
             title={post.title}
-            username={post.username}
-            date={post.date}
+            username="guestUser123"
+            date={Date()}
             code={post.code}
-            comments={post.comments}
+            comments="Try this solution"
             attempt={post.attempt}
             describe={post.describe}
           />
