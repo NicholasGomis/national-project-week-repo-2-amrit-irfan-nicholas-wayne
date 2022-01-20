@@ -27,15 +27,15 @@ function Post({
       </p>
       <div className="btn-container">
         <button className="btn-like">
-          <i class="fas fa-thumbs-up"></i>
+          <i className="fas fa-thumbs-up"></i>
         </button>
 
         <button className="btn-comment">
-          <i class="fas fa-comment-dots"></i>
+          <i className="fas fa-comment-dots"></i>
         </button>
 
         <button className="btn-save">
-          <i class="fas fa-plus-square"></i>
+          <i className="fas fa-plus-square"></i>
         </button>
       </div>
 
