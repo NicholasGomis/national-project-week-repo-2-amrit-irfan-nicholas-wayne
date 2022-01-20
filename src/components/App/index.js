@@ -34,7 +34,7 @@ function App() {
       //iterate post
       post_id: data.payload[count].post_id,
       title: data.payload[count].title,
-      username: data.payload[count].author_id,
+      username: "guestUser123",
       date: data.payload[count].date,
       code: data.payload[count].content,
       attempt: data.payload[count].attempted,
@@ -58,7 +58,7 @@ function App() {
       const postDetails = {
         post_id: data.payload[0].post_id,
         title: data.payload[0].title,
-        username: data.payload[0].author_id,
+        username: "guestUser123",
         date: data.payload[0].date,
         code: data.payload[0].content,
         attempt: data.payload[0].attempted,

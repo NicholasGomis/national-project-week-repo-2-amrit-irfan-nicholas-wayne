@@ -58,7 +58,7 @@ export function Form({ handleNewPost }) {
   function addPost(inputName, inputTitle, inputProblem, inputTried, inputCode) {
     console.log("submit received");
     const post = {
-      auth_id: 1,
+      username: inputName,
       title: inputTitle,
       problem: inputProblem,
       attempted: inputTried,
@@ -85,7 +85,7 @@ export function Form({ handleNewPost }) {
     const postDetails = {
       post_id: data.payload.post_id,
       title:  data.payload.title,
-      username: data.payload.author_id,
+      username: post.username,
       date: data.payload.date,
       code: data.payload.content,
       attempt: data.payload.attempted,

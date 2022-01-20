@@ -10,7 +10,7 @@ function Feed({ posts }) {
             key={post.post_id}
             avatar="https://i.ibb.co/r2z4DvG/avatar-soc1.png"
             title={post.title}
-            username="guestUser123"
+            username={post.username}
             date={Date()}
             code={post.code}
             comments="Try this solution"
