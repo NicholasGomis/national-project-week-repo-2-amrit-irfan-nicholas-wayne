@@ -8,17 +8,14 @@ import Form from "../Form";
 import Feed from "../Feed";
 import Navbar from "../Nav";
 
-// for temp use
-import dataPosts from "../lib/dataPost";
+
 
 //declare vars
 const API_URL = "https://code-review-soc-app.herokuapp.com";
-
-
+let initialState = []
 //Hook
 function App() {
-  const [posts, updatePosts] = useState([]);
-  console.log(posts)
+  const [posts, updatePosts] = useState(initialState);
 
   function handleNewPost(newPost) {
     const newArray = [...posts, newPost]
@@ -36,16 +33,19 @@ function App() {
       });
       const data = await response.json();
       const postDetails = {
-        title:  data.payload[0].title,
+        post_id: data.payload[0].post_id,
+        title: data.payload[0].title,
         username: data.payload[0].author_id,
         date: data.payload[0].date,
         code: data.payload[0].content,
         attempt: data.payload[0].attempted,
-        describe:data.payload[0].problem
+        describe: data.payload[0].problem
       }
-      handleNewPost(postDetails);
+      console.log(postDetails.post_id);
+      const newArray = [...initialState, postDetails]
+      updatePosts(newArray);
     }
-    fetchPost()
+    fetchPost();
   }, []);
 
   
