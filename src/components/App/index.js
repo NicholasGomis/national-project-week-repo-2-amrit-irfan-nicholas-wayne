@@ -32,6 +32,7 @@ function App() {
 
     const postDetails = {
       //iterate post
+      post_id: data.payload[count].post_id,
       title: data.payload[count].title,
       username: data.payload[count].author_id,
       date: data.payload[count].date,
