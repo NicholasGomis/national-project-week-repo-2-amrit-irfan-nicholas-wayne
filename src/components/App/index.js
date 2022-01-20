@@ -28,7 +28,7 @@ function App() {
   }
 
   function onClick() {
-    console.log(data);
+    //console.log(data);
 
     const postDetails = {
       //iterate post
