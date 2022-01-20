@@ -83,7 +83,8 @@ export function Form({ handleNewPost }) {
     const data = await response.json();
     // console.log(data.payload.attempted);
     const postDetails = {
-      title: data.payload.title,
+      post_id: data.payload.post_id,
+      title:  data.payload.title,
       username: data.payload.author_id,
       date: data.payload.date,
       code: data.payload.content,
@@ -96,7 +97,7 @@ export function Form({ handleNewPost }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="title">What is your question?</div>
-      <div className="subtitle">Articulate your question in the soc way!</div>
+      <div className="subtitle">Articulate your question in the School of Code way!</div>
       <div className="input-container ic1">
         <input
           id="firstname"
