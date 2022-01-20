@@ -19,8 +19,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Form />
-      <Feed posts={posts} />
+      <div className="container">
+        <Form />
+        <Feed posts={posts} />
+        </div>
     </div>
   );
 }

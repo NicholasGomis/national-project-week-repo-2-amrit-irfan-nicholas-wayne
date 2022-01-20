@@ -77,11 +77,11 @@ export function Form() {
   async function createPosts(post) {
     const response = await fetch(`${API_URL}/posts`, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(post),
     });
     const data = await response.json();
-    console.log(data);
+    console.log(data.payload);
   }
 
   return (

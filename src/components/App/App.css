@@ -1,17 +1,25 @@
 * {
   box-sizing: border-box;
 }
-/* body {
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.container {
   align-items: center;
   background-color: #000;
   display: flex;
   justify-content: center;
-} */
+  flex-direction: column;
+} 
 
 nav {
   margin-bottom: 20px;
   padding: 5px;
   background-color: #303245;
+  
 }
 .logo-img {
   width: 250px;
