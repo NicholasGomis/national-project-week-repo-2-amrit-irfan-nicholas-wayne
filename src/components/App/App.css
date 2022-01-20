@@ -32,144 +32,6 @@ nav {
   height: auto;
 }
 
-/* posts css */
-
-/* .post {
-  /* background-color: #1c1e21;
-  padding: 2em;
-  width: 30em;
-  border-radius: 30px;
-  text-align: center;
-  margin-left: 40em;
-  color: aliceblue;
-  background-color: #1c1e21;
-  border-radius: 20px;
-  box-sizing: border-box;
-  height: 600px;
-  padding: 50px;
-  width: 700px;
-  margin-bottom: 50px;
-  margin-left: 9em;
-  font-family: sans-serif;
-}
-
-.input-post {
-  background-color: #303245;
-  border-radius: 12px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  font-size: 18px;
-  height: 50%;
-  outline: 0;
-  padding: 4px 20px 0;
-  width: 100%;
-}
-
-.avatar {
-  height: 80px;
-  width: auto;
-}
-
-.avatar-name {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-.post-date {
-  margin-left: 300px;
-}
-
-.btn-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.btn-like {
-  display: flex;
-  width: 160px;
-  padding: 5px 5px;
-  justify-content: center;
-  align-items: center;
-  background-color: #bcc0c4;
-  border-radius: 5px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  cursor: pointer;
-  font-size: 18px;
-  height: 40px;
-  margin-top: 5px;
-  outline: 0;
-  text-align: center;
-  width: 19%;
-}
-
-.btn-like:hover {
-  background-color: #65676b;
-}
-
-.fas {
-  color: #000;
-  font-size: 18px;
-}
-
-.btn-comment {
-  display: flex;
-  width: 160px;
-  padding: 5px 5px;
-  justify-content: center;
-  align-items: center;
-  background-color: #bcc0c4;
-  border-radius: 5px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  cursor: pointer;
-  font-size: 18px;
-  height: 40px;
-  margin-top: 5px;
-  outline: 0;
-  text-align: center;
-  width: 19%;
-}
-
-.btn-comment:hover {
-  background-color: #65676b;
-}
-
-.btn-save {
-  display: flex;
-  width: 160px;
-  padding: 5px 5px;
-  justify-content: center;
-  align-items: center;
-  background-color: #bcc0c4;
-  border-radius: 5px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  cursor: pointer;
-  font-size: 18px;
-  height: 40px;
-  margin-top: 5px;
-  outline: 0;
-  text-align: center;
-  width: 19%;
-}
-
-.btn-save:hover {
-  background-color: #65676b;
-} */
-
-/* hover {
-          background-color: rgba(0, 0, 0, 0.05);
-          cursor: pointer;
-        } */
-
 /* form css */
 
 .form {
@@ -574,4 +436,43 @@ nav {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 1em;
+}
+
+/* load-button */
+
+.to-top {
+  color: white;
+  padding-top: 1.8em;
+  display: inline-block; /* or block */
+  position: relative;
+  border-color: white;
+  text-decoration: none;
+  background: #000;
+  transition: all 0.3s ease-out;
+  margin-left: 7.8em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 1em;
+}
+.to-top:before {
+  content: "⬇";
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -0.7em;
+  border: solid 0.13em white;
+  border-radius: 10em;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.3em;
+  border-color: inherit;
+  transition: transform 0.5s ease-in;
+}
+.to-top:hover {
+  color: #08d;
+  border-color: white;
+}
+.to-top:hover:before {
+  transform: rotate(360deg);
 }

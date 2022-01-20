@@ -1,7 +1,11 @@
 import React from "react";
 
 function Button({ onClick }) {
-  return <button onClick={onClick}>Load More</button>;
+  return (
+    <button className="to-top" onClick={onClick}>
+      Load More
+    </button>
+  );
 }
 
 export default Button;
